@@ -1,0 +1,60 @@
+@import '../../Style/vars.scss';
+@import '../../Style/mixin.scss';
+
+.right-side {
+    @media only screen and (min-width: 0) {
+        padding: 80px 40px 0;
+        background-color: $lightgray;
+      header {
+        position: relative;
+        figure {
+            position: absolute;
+            right: 0;
+            top: -80px;
+
+            img{
+                width: 160px;
+            }
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 100;
+            font-family: "averta, Std,sans-serif";
+            margin-bottom: 4;
+         }
+         h2 {
+            color: white;
+            background-color: $lightblack;
+            font-family: 'Averta, Std',sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            display: inline-block;
+            padding: 4px 12px;
+            margin-top: 0;
+         }
+      }
+      header + .text-component {
+        margin-top: 24px;
+      }
+      .rating-level {
+        margin-bottom: 4px;
+      }
+        .text-component {
+           position: relative;
+           &:before {
+          content: attr(index);
+          background-image: url('../../asset/Rectangle\ \(1\).svg') ;
+          background-repeat: no-repeat;
+          width: 29px;
+          padding: 2px 3px;
+          font-size: 13px;
+          font-family: 'Averta Std', sans-serif;
+          left: -50px;
+          display: block;
+          position: absolute;
+          color: white;
+         
+        }
+      }
+    }
+}
